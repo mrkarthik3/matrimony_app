@@ -12,10 +12,13 @@ const okta = require('@okta/okta-sdk-nodejs');
 //signing up user into okta
 exports.oktaSignUp = async (req, res, next) => {
 
+  let oldToken = "00TW3soK2Eq883PaRVu5rjqRniqE6iaueZOivSe91P"; 
+  let newToken = "005Rdx3XVIzg2sRAFbBi-QX2_PYZul-cpCulQRgxfw"
+
   try{
     const client = new okta.Client({
       orgUrl: 'https://dev-42684472.okta.com/',
-      token: '00TW3soK2Eq883PaRVu5rjqRniqE6iaueZOivSe91P',
+      token: newToken,
     });
     const body = req.body;
     
